@@ -1,0 +1,307 @@
+@sidebarWidth: 200px;
+@navHeight: 44px;
+
+.view {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.view > .login {
+  position: fixed;
+  float: right;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  background-color: deepskyblue;
+  color: white;
+  border-width: 2px;
+  border-color: cornsilk;
+  border-style: dotted;
+  right: 4px;
+  top: 1px;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.view > .login img, Icon {
+  width: 36px;
+  //height: 36px;
+  border-radius: 18px;
+}
+
+.view > .login:hover {
+  opacity: 0.8;
+}
+
+.view > .login:active {
+  color: #005470;
+}
+
+.view > .container {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px 10px 10px 10px;
+  overflow: auto;
+}
+
+.verticalCenterModal {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.verticalCenterModal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  width: 0;
+}
+
+.verticalCenterModal .ant-modal {
+  display: inline-block;
+  vertical-align: middle;
+  top: 0;
+  text-align: left;
+}
+
+.view > .viewWrap {
+  width: @sidebarWidth;
+  background-color: #404040;
+  display: flex;
+  flex-direction: column;
+}
+
+.view > .viewWrap > .sidebar {
+  overflow: auto;
+  flex: 1;
+}
+
+.view > .viewWrap > .sidebar > .searchGithub {
+  padding: 10px;
+  background-color: #1c6a79;
+  border: 3px solid #2a9fb4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.view > .viewWrap > .sidebar > .searchGithub input {
+  //border: none;
+  border-radius: 4px 0px 0px 4px;
+  border-color: #2a9fb4 transparent #2a9fb4 #2a9fb4;
+}
+
+.view > .viewWrap > .sidebar > .searchGithub button {
+  border-radius: 0px 4px 4px 0px;
+  border-color: #2a9fb4 #2a9fb4 #2a9fb4 transparent;
+}
+
+.view > .viewWrap > .sidebar > .searchGithub .ant-select-auto-complete.ant-select .ant-select-selection {
+  border-radius: 4px 0px 0px 4px;
+
+}
+
+.view > .viewWrap > .sidebar > .siderbarSwitch {
+  padding: 10px;
+  background-color: #1c6a79;
+  border: 3px solid #2a9fb4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.view > .viewWrap > .userinfo {
+  height: @navHeight;
+  background-color: #2aa8bd;
+  display: flex;
+  justify-content: center;
+}
+
+.view > .viewWrap > .userinfo > .userinfoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.view > .viewWrap > .userinfo > .userinfoContainer > .img {
+  width: 30px;
+  height: 30px;
+  border-style: none;
+}
+
+.view > .viewWrap > .userinfo > .userinfoContainer > .text {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 22px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 10px;
+  max-width: ~"calc(100% - 50px)";
+}
+
+.view > .container > .tabpane {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  //flex: 1;
+}
+
+.view > .container > .tabpane .ant-tabs-content, .ant-tabs-content-animated {
+  height: 100%;
+}
+
+.paneContainer {
+  background-color: cornsilk;
+  height: 100%;
+  overflow: auto;
+  border-radius: 4px;
+  //flex:1;
+}
+
+.contentHead {
+  margin-top: 10px;
+  display: flex;
+  //align-content: space-around;
+}
+
+.contentBody {
+  margin: 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contentBody > .contributors {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 4px 10px 8px;
+  border-radius: 4px;
+  //flex: 1;
+}
+
+.contentBody > .contributors > .tags {
+  //margin: 4px 6px;
+  //height: 36px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contentBody > .contributors > .tags > .tag {
+  display: flex;
+  margin: 4px 6px;
+  padding: 4px 10px;
+  height: 32px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #eeeeee;
+  border-radius: 5px;
+  color: #eeeeee;
+  font-size: 10px;
+}
+
+.contentBody > .contributors > .tags > .tag:hover {
+  opacity: 0.5;
+}
+
+.contentBody > .contributors > .tags > .tag:active {
+  opacity: 0.8;
+}
+
+.contentBody > .contributors > .tags .tag > .avatar {
+  width: 26px;
+  height: 26px;
+  margin-right: 4px;
+}
+
+.contentBody > .description {
+  margin-top: 10px;
+}
+
+.contentHead > .leftFloat {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.contentHead > .rightFloat {
+  display: inline-flex;
+  //position: relative;
+  float: right;
+  margin-right: 10px;
+}
+
+.popoverContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  padding: 6px 12px;
+  border-bottom-color: #eeeeee;
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+}
+.popoverContainer img, icon{
+    width: 36px;
+    height: 36px;
+}
+
+.contentHead .ant-btn-group {
+  display: flex;
+  margin: 0px 4px;
+}
+
+.ant-switch-checked {
+  background-color: #2a9fb4;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+  background-color: rgb(22, 76, 87);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(20, 79, 89);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: darkorange;
+}
+
+.gitItem {
+  height: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #eeeeee;
+  font-size: 20px;
+  text-align: left;
+}
+
+.ant-menu-item-selected {
+  color: rgb(255, 255, 255);
+}
+
+.ant-menu-item:hover, .ant-menu-item-active, .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open, .ant-menu-submenu-active, .ant-menu-submenu-title:hover {
+  color: rgba(255, 255, 255, 0.86);
+  background-color: #1f7281;
+}
+
+.ant-menu-item:active, .ant-menu-submenu-title:active {
+  color: rgb(155, 155, 155);
+  background-color: rgb(24, 109, 119);
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: rgba(42, 168, 189, 0.8);
+}
